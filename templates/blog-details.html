@@ -3,16 +3,15 @@
 {% block body %}
 
     <!-- Blog Details Hero Section Begin -->
-    <section class="blog-details-hero set-bg" data-setbg="{% static 'img/blog/details/details-hero.jpg' %}">
+    <section class="blog-details-hero set-bg" data-setbg="{{ blogsingle.image.url }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 p-0 m-auto">
                     <div class="bh-text">
-                        <h3>Workout nutrition explained. What to eat before, during, and after exercise.</h3>
+                        <h3>{{ blogsingle.title }}</h3>
                         <ul>
-                            <li>by Admin</li>
-                            <li>Aug,15, 2019</li>
-                            <li>20 Comment</li>
+                            <li>{{ blogsingle.author }}</li>
+                            <li>{{ blogsingle.on_date }}</li>
                         </ul>
                     </div>
                 </div>
@@ -28,12 +27,7 @@
                 <div class="col-lg-8 p-0 m-auto">
                     <div class="blog-details-text">
                         <div class="blog-details-title">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua accusantium doloremque laudantium. Excepteur
-                                sint occaecat cupidatat non proident sculpa .</p>
+                            <p>{{ blogsingle.describe }}</p>
                             <p>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit
                                 amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

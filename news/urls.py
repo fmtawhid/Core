@@ -2,5 +2,5 @@ from django.urls import path
 from .views import *
 urlpatterns = [
     path('', news),
-    path('sn', singlenews),
+    path('<int:id>/', singlenews, name='sn'),
 ]
